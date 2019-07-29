@@ -1,0 +1,16 @@
+{# 购物车 提交订单 用户中心 #}
+{% extends 'base.html' %}  {# 继承 base,html 模板 #}
+{% load staticfiles %}
+{# 网页顶部搜索框 #}
+{% block search_bae %}
+<div class="search_bar clearfix">
+		<a href="{% url 'goods:index' %}" class="logo fl"><img src="{% static 'images/logo.png' %}"></a>
+		<div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;{% block pagetitle %}{% endblock pagetitle %}</div>
+		<div class="search_con fr">
+            <form method="get" action="{% url 'haystack_search' %}">
+                <input type="text" class="input_text fl" name="q" placeholder="搜索商品">
+                <input type="submit" class="input_btn fr" name="" value="搜索">
+            </form>
+		</div>
+	</div>
+{% endblock search_bae %}
