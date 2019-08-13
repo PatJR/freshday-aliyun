@@ -16,7 +16,7 @@ message["Subject"] = "一起嗨吧！"
 
 def send_email():
     try:
-        server = smtplib.SMTP()
+        server = smtplib.SMTP_SSL()
         server.connect(mail_host, port=25)
         server.login(mail_user,mail_pass)
         server.sendmail(sender,receiver,message.as_string())
