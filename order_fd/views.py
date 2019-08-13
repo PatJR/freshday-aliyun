@@ -92,7 +92,7 @@ class OrderCommitView1(View):
         sku_ids = request.POST.get('sku_ids')
         # 校验参数
         if not all([addr_id, pay_method, sku_ids]):
-            return JsonResponse({'res': 1, 'errmsg': '参数不完整'})
+            return JsonResponse({'res': 1, 'errmsg': '请编辑收货地址'})
         # 校验支付方式
         if pay_method not in OrderInfor.PAY_METHODS.keys():
             return JsonResponse({'res': 2, 'errmsg': '非法的支付方式'})

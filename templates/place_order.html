@@ -15,7 +15,7 @@
 			<dd><input type="radio" name="addr_id" value="{{ ad.id }}"{% if ad.is_default %}checked="checked"{% endif %} >{{ ad.address }} （{{ ad.receiver }} 收）联系方式： {{ ad.phone }}</dd>
 		</dl>
         {% endfor %}
-		<a href="user_center_site.html" class="edit_site">编辑收货地址</a>
+		<a href="{% url 'user:address' %}" class="edit_site">编辑收货地址</a>
 
 	</div>
 	
@@ -90,7 +90,7 @@
             sku_ids = $(this).attr('sku_ids')
             csrf = $('input[name="csrfmiddlewaretoken"]').val()
             {#csrf = 'NKJgeAsHX9IrP9bHYaIAUzFrLllujNMHgFef5bEM9AmoYSAXqkUZpCA2XUSOLZTh'#}
-            alert(csrf)
+            {#alert(csrf)#}
             {#alert(addr_id+':'+pay_method+":"+sku_ids)#}
             //组织参数
             params = {'addr_id':addr_id, 'pay_method':pay_method, 'sku_ids':sku_ids, 'csrfmiddlewaretoken':csrf}

@@ -15,7 +15,9 @@ import os
 class IndexView(View):
     def get(self, request):
         """显示首页"""
+        print('收到请求')
         # 尝试从缓存中获取数据
+        print('尝试从缓存中获取数据')
         context = cache.get('index_page_data')
         print(context)
         if context is None:
