@@ -162,14 +162,15 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # smtp服务器地址，在邮箱中查看
 EMAIL_HOST = 'smtp.qq.com'
 # smtp端口
-EMAIL_PORT = 25
+# EMAIL_PORT = 25
+EMAIL_PORT = 465  # aliyun
 # 发送邮件的邮箱pat201978@163.com'
 EMAIL_HOST_USER = '995010997@qq.com'
 # 在邮箱中设置的客户端授权密码  QQ xmmafvuvvboybecj  163 pat123456
 EMAIL_HOST_PASSWORD = 'xmmafvuvvboybecj'
 # 收件人看到的发件人
 EMAIL_FROM = '自定义内容<995010997@qq.com>'
-
+EMAIL_USE_SSL = True # 启用SSL协议，阿里云部署需要支持
 # django 使用redis 作为缓存
 CACHES = {
     "default": {

@@ -1,1 +1,1 @@
-celery multi start worker1 -A freshday.celery_fd  # 启动
+celery multi start worker1 -A freshday.celery_fd  # 启动CELERY任务
